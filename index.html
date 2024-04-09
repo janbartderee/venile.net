@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Venile.net - urban deltas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style/style-new.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="nile-delta.html">Nile Delta</a>
+      <a href="venetian-lagoon.html">Venetian Lagoon</a>
+      <a href="about.html">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myNavigation()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div
+      id="navSmallScreen"
+      class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"
+    >
+      <a href="index.html" class="topnavsmallscreen">Home</a>
+      <a href="nile-delta.html" class="topnavsmallscreen">Nile Delta</a>
+      <a href="venetian-lagoon.html" class="topnavsmallscreen"
+        >Venetian Lagoon</a
+      >
+      <a href="about.html" class="topnavsmallscreen">About</a>
+    </div>
+    <!-- Header -->
+    <header
+      class="w3-container w3-center headerhero"
+      style="padding: 128px 16px"
+    >
+      <h1 class="w3-margin w3-jumbo">Venile.net</h1>
+      <p class="w3-xlarge">Natural challanges in urban deltas</p>
+      
+    </header>
+
+    <!-- First Grid -->
+    <!--buitenrand-->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <!--inhoud-->
+      <div class="w3-content">
+        <div class="twothird">
+          <h1>Urban deltas</h1>
+          <h5 class="">
+            Coastal cities and urban deltas, where land meets the sea, are
+            located in dynamic and vital ecosystems. These intricate landscapes
+            are home to over half a billion people worldwide, supporting
+            fisheries, agriculture, cities, and diverse ecosystems. However,
+            their existence is under threat from a convergence of natural
+            challenges and human actions.
+          </h5>
+          <h5>
+            On this website we dive into the natural challanges of two coastal
+            regions: the Venetian Lagoon (Italy) and the Nile River Delta
+            (Egypt).
+          </h5>
+        </div>
+
+        <div class="third">
+          <div class="quote">
+            <h5>More than</h5>
+            <h1>500 million</h1>
+            <h5>people worldwide live in deltas</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-light-grey w3-padding-64 w3-container">
+      <!--nieuwe grid tiles-->
+
+      <div class="imgnav-container">
+        <a href="venetian-lagoon.html" class="item item-venice">
+          <h3>Venetian Lagoon</h3>
+        </a>
+
+        <a href="nile-delta.html" class="item item-nile">
+          <h3>Nile Delta</h3>
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <!-- 1st Grid -->
+        <div class="half">
+          <h1>Natural challanges</h1>
+          <p class="">
+            Rising global temperatures lead to melting glaciers and ice sheets,
+            contributing to a rise in sea levels. Coastal cities and deltas are
+            particularly vulnerable to this phenomenon. As sea levels creep
+            upward, these low-lying areas face inundation, erosion, and
+            saltwater intrusion. Additionally, human activities, such as
+            groundwater extraction and urban development, cause land subsidence,
+            weakening the protective buffer against flooding. Rapid urbanization
+            further strains delta regions, disrupting natural sediment delivery
+            processes and affecting land elevation. Urgent action is needed to
+            safeguard these vital regions, balancing human needs with ecological
+            resilience.
+          </p>
+        </div>
+
+        <div class="video-container half">
+          <br /><br />
+          <iframe
+            class="video"
+            width="100%"
+            height=""
+            src="https://www.youtube.com/embed/6tesHVSZJOg?si=qFY3o30p6BGtoge6"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <img
+          src="https://primary.jwwb.nl/public/x/l/i/temp-fwritwctxktsvqdcjmkb/5mn296/AERES-HOGESCHOOL-AlmereHorizontaal-rgb.png"
+          height="48px"
+        />
+        <img
+          src="https://primary.jwwb.nl/public/n/z/i/temp-gotiqqxsoiacfjpigcmf/yxvj4t/210600logogeolabmettekst.webp?enable-io=true&enable=upscale&width=149"
+          height="64px"
+        />
+      </div>
+    </footer>
+
+    <script>
+      function myNavigation() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myNavigation() {
+        var x = document.getElementById("navSmallScreen");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

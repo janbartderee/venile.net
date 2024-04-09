@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Venile.net - urban deltas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style/style-new.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="nile-delta.html">Nile Delta</a>
+      <a href="venetian-lagoon.html">Venetian Lagoon</a>
+      <a href="about.html">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myNavigation()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div
+      id="navSmallScreen"
+      class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"
+    >
+      <a href="index.html" class="topnavsmallscreen">Home</a>
+      <a href="nile-delta.html" class="topnavsmallscreen">Nile Delta</a>
+      <a href="venetian-lagoon.html" class="topnavsmallscreen"
+        >Venetian Lagoon</a
+      >
+      <a href="about.html" class="topnavsmallscreen">About</a>
+    </div>
+
+    <!--buitenrand-->
+    <div class="content">
+      <!-- 1st Grid -->
+      <div class="container">
+        <h1>About</h1>
+        <p>
+          This website is developed by Jan Bart de Ree, a Geo Media & Design
+          student, as part of <a href="https://www.geolab-almere.nl/">  GeoLab Almere.</a>
+        </p>
+        <p> Every year students of Aeres University of Applied Sciences learn to
+          create websites from scratch. They individually design and develop a
+          websites around the topic of Urban Deltas.
+        </p>
+        <p>Discover more websites on <a href="https://geowerk.nl/urbandeltas/">https://geowerk.nl/urbandeltas/.</a></p>
+      </div><img src="https://primary.jwwb.nl/public/n/z/i/temp-gotiqqxsoiacfjpigcmf/xvbw4j/210600LogoGeoLabmettekst-2.png" height="100px" style="margin: 10px;">
+          
+     
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="bottom: 0px; position: fixed">
+      <i class="fa fa-facebook-official socialmedbutton"></i>
+      <i class="fa fa-instagram socialmedbutton"></i>
+      <img
+        src="https://primary.jwwb.nl/public/x/l/i/temp-fwritwctxktsvqdcjmkb/5mn296/AERES-HOGESCHOOL-AlmereHorizontaal-rgb.png"
+        height="48px"
+      />
+      <img
+        src="https://primary.jwwb.nl/public/n/z/i/temp-gotiqqxsoiacfjpigcmf/yxvj4t/210600logogeolabmettekst.webp?enable-io=true&enable=upscale&width=149"
+        height="64px"
+      />
+    </footer>
+
+    <script>
+      function myNavigation() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myNavigation() {
+        var x = document.getElementById("navSmallScreen");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

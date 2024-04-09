@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Venile.net - urban deltas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style/style-new.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script
+      src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"
+      integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ=="
+      crossorigin=""
+    ></script>
+
+    <style>
+      #map-leaflet1,
+      #map-leaflet2 {
+        height: 300px;
+        width: 100%;
+        border: 1px;
+      }
+      .toggle-control button {
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+
+      .toggle-control button:hover {
+        background-color: #f2f2f2;
+      }
+      .leaflet-touch .leaflet-control-layers,
+      .leaflet-touch .leaflet-bar {
+        border: 0px solid rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="nile-delta.html">Nile Delta</a>
+      <a href="venetian-lagoon.html">Venetian Lagoon</a>
+      <a href="about.html">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myNavigation()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens -->
+    <nav
+      id="navSmallScreen"
+      class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"
+    >
+      <a href="index.html" class="topnavsmallscreen">Home</a>
+      <a href="nile-delta.html" class="topnavsmallscreen">Nile Delta</a>
+      <a href="venetian-lagoon.html" class="topnavsmallscreen"
+        >Venetian Lagoon</a
+      >
+      <a href="about.html" class="topnavsmallscreen">About</a>
+    </nav>
+    <!--buitenrand-->
+    <div class="content">
+      <!-- 1st Grid -->
+      <div class="container">
+        <h1>Venetian Lagoon</h1>
+        <div class="pubdate">Published on 10 April 2024</div>
+        <div class="twothird">
+          <h5>
+            Venice, located on the coast of northeast Italy, is an architectural
+            marvel with a rich history. The city of Venice, founded in the 5th
+            century AD, is spread over 118 small islands (Cessi et al., 2024;
+            UNESCO World Heritage Centre, n.d.). Originally formed by the
+            interaction of Adriatic tidal currents and the waters of several
+            Alpine rivers, the lagoon has always been a crucial factor in the
+            history of Venice (Cessi et al., 2024).
+          </h5>
+          <p>
+            Situated in the heart of a lagoon, Venice occupied a unique position
+            within the Adriatic Sea, in proximity to the Byzantine Empire and
+            providing access to traders from the Near East, which made it an
+            ideal hub for commerce (UNESCO, n.d.). Consequently Venice became a
+            cosmopolitan city and major power in the medieval and early modern
+            world. Nowadays Venice is renowned for its unique network of canals,
+            historic landmarks and architecture, making it a popular destination
+            for tourists from around the world (UNESCO World Heritage Centre,
+            n.d.).
+          </p>
+        </div>
+        <div class="third mediacontainer"><div id="map-leaflet1"></div></div>
+      </div>
+
+      <!-- 2nd Grid -->
+      <div class="container">
+        <div class="third mediacontainer">
+          <div
+            class="flourish-embed flourish-chart mapcontent"
+            data-src="visualisation/17459715"
+          ></div>
+        </div>
+        <div class="twothird">
+          <h4>Acqua Alta</h4>
+          <p>
+            While Venice&apos;s unique geographical location and architectural
+            beauty have made it a world-renowned tourist destination, it also
+            faces significant natural challenges. One of the most pressing of
+            these is the phenomenon known as Acqua Alta (Caroli & Soriani, 2017;
+            Faranda et al., 2023; Meyer, 2021). Acqua Alta, or "high water," is
+            a phenomenon that occurs in Venice when high tides combine with low
+            air pressures and winds from the southeast, causing the waters of
+            the lagoon to rise and flood the city.
+          </p>
+          <p>
+            On November 12, 2019 Venice was submerged under the most
+            exceptionally high tide in 50 years. The flooding was recorded as
+            the second highest in the city&apos;s history, after the disastrous
+            flood of 1966, also known as the “Great Flood of Venice" (Faranda et
+            al., 2023; Lionello et al., 2021).
+          </p>
+          <p>
+            As part of a broader plan to protect Venice and its lagoon,
+            construction works of the MOSE project (MOdulo Sperimentale
+            Elettromeccanico, or “Experimental Electromechanical Module”) began
+            in 2003 (Lionello et al., 2021). This storm surge barrier is
+            specifically designed to close off the three inlets connecting the
+            lagoon and the Adriatic Sea during high tides, effectively blocking
+            seawater inflow (Cavaleri et al., 2020; Cavallaro et al., 2017).
+          </p>
+        </div>
+      </div>
+
+      <!-- 3rd Grid -->
+      <div class="container">
+        <div class="twothird">
+          <h4>Land Subsidence in Venice and the Lagoon</h4>
+          <p>
+            In addition to the rising sea levels discussed earlier, land
+            subsidence in Venice and the Lagoon also poses a significant threat.
+            This phenomenon exacerbates the city&apos;s vulnerability to
+            flooding and indicates that Venice is, quite literally, sinking
+            (Caroli & Soriani, 2017; Lionello et al., 2021; Mikhailova, 2021).
+            Land subsidence, both geological and anthropogenic, has played a
+            significant role in the origin and evolution of the lagoon.
+            Geological land subsidence contributed to the origin and evolution
+            of the lagoon, while anthropogenic subsidence has recently assumed
+            major importance for the Venetian environment. In the last century,
+            about 25 cm of subsidence occurred, mainly due to groundwater
+            pumping in the nearby industrial area (Tosi et al., 2013). The
+            subsidence of Venice is not so much renowned for the extent of the
+            ground movement, but rather for the serious threat it poses to the
+            city&apos;s heritage and safety, given its minimal elevation above
+            sea level (Lio, C. et al., 2017).
+          </p>
+        </div>
+        <div class="third mediacontainer">
+          <div id="map-leaflet2"></div>
+        </div>
+      </div>
+
+      <!-- 4th Grid -->
+      <div class="container">
+        <div class="third mediacontainer">
+          <img
+            class="mapcontent"
+            src="img/gettyimages-912302434.png"
+            width="100%"
+          />
+          <p class="caption">Extremely low tide <br>(© Simone Padovani/Awakening/Getty Images)</p>
+        </div>
+        <div class="twothird">
+          <h4>Low tide and water scarcity</h4>
+          <p>
+            In contrast to the issues of sinking and flooding, Venice faces
+            unique challenges during periods of low water levels, leading to
+            dried up canals at low tide. The city&apos;s iconic gondolas and
+            vaporetto water buses, which serve as the primary means of
+            transportation, can find their movement hindered during these times.
+            This not only disrupts daily commutes but also impacts the vital
+            tourism industry that the city&apos;s economy heavily relies on.
+            Furthermore, emergency services such as ambulance boats can also be
+            affected (Buckley, 2023; Reuters, 2023). To address this, Venice has
+            developed strategies to reroute transportation services during these
+            periods.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5th Grid -->
+      <div class="container">
+        <div class="twothird">
+          <p>
+            In conclusion, Venice&apos;s unique geographical characteristics
+            present a complex array of environmental challenges. From managing
+            the impacts of regular floodings to climate extremes and from land
+            subsidence to navigating the issues of low tides and water scarcity,
+            the city continues to adapt and innovate. Looking towards the
+            future, Venice&apos;s ongoing efforts in environmental management
+            and sustainable practices will be crucial in preserving its rich
+            cultural heritage and unique urban landscape.<br /><br />
+            <a href="references.html" class="references"
+              >See all references for this article</a
+            >
+          </p>
+        </div>
+        <div class="third mediacontainer">
+          <img class="mapcontent" src="img/mose.gif" width="100%" />
+          <p class="caption">MOSE flood barrier</p>
+        </div>
+      </div>
+
+      <!--Panorama viewer Google Maps-->
+      <div class="container360">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!4v1712255723716!6m8!1m7!1sW5nfIlFxkx2TGnrXSbIJww!2m2!1d45.43743523720273!2d12.33528065480982!3f33.35753843229443!4f0.7593328089516689!5f0.7820865974627469"
+          width="100%"
+          height="300vw"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="caption">Canal Grande at Rialto Bridge in the heart of Venice</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <i class="fa fa-facebook-official socialmedbutton"></i>
+      <i class="fa fa-instagram socialmedbutton"></i>
+      <img
+        src="https://primary.jwwb.nl/public/x/l/i/temp-fwritwctxktsvqdcjmkb/5mn296/AERES-HOGESCHOOL-AlmereHorizontaal-rgb.png"
+        height="48px"
+      />
+      <img
+        src="https://primary.jwwb.nl/public/n/z/i/temp-gotiqqxsoiacfjpigcmf/yxvj4t/210600logogeolabmettekst.webp?enable-io=true&enable=upscale&width=149"
+        height="64px"
+      />
+    </footer>
+
+    <!--Script voor Flourish Chart -->
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+    <!--Script voor responsive navigatiebalk-->
+    <script>
+      function myNavigation() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <!--Script voor responsive navigatiebalk op kleine schermen-->
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myNavigation() {
+        var x = document.getElementById("navSmallScreen");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+    <script>
+      var map = L.map("map-leaflet1").setView([45.4408, 12.3155], 13);
+      L.tileLayer(
+        "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamFuYmFydCIsImEiOiJjazQ5eWhubGkwMW1vM2twMXd3NWxzbGgzIn0.KaaFXUx95N6lRra0lEDNuw",
+        {
+          maxZoom: 19,
+          id: "mapbox/satellite-v9",
+          tileSize: 512,
+          zoomOffset: -1,
+          attribution:
+            'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        }
+      ).addTo(map);
+
+      // Voeg een marker toe voor Venetië met een vetgedrukte pop-up tekst
+      var veniceMarker = L.marker([45.438, 12.33], {
+        icon: L.icon({
+          iconUrl:
+            "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png",
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41],
+        }),
+      }).addTo(map);
+    </script>
+    <script>
+      var map = L.map("map-leaflet2").setView([45.43, 12.33], 11);
+
+      const backgroundMap = L.tileLayer(
+        "http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+        {
+          attribution:
+            '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+          maxZoom: 14,
+        }
+      );
+
+      backgroundMap.addTo(map);
+
+      var veniceLayer = new L.geoJSON();
+
+      fetch("libs/venice.geojson")
+        .then((response) => response.json())
+        .then((data) => {
+          veniceLayer.addData(data);
+          veniceLayer.eachLayer(function (layer) {
+            layer.bindPopup(
+              '<h2>Flooding at Acqua alta</h2><p>This map shows which parts of the city are flooded at different water heights.</p><p> Click on the image to open in a new window.</p><a href="https://tos.org/oceanography/assets/images/content/33-1_ismar_app.jpg"><img src="https://tos.org/oceanography/assets/images/content/33-1_ismar_app.jpg" width="50px"></a>'
+            );
+          });
+        })
+        .catch((error) => {
+          console.error(
+            "An error occurred while loading the GeoJSON data:",
+            error
+          );
+        });
+
+      // Add the GeoJSON layer to your map
+      veniceLayer.addTo(map);
+
+      // Create a new Leaflet control for the toggle button
+      var toggleControl = L.control({ position: "bottomright" });
+
+      toggleControl.onAdd = function (map) {
+        var div = L.DomUtil.create("div", "toggle-control");
+        div.innerHTML = '<button id="toggle-venice">Hide Venice Layer</button>';
+        return div;
+      };
+
+      toggleControl.addTo(map);
+
+      // Toggle function for the Venice layer
+      document.getElementById("toggle-venice").onclick = function () {
+        if (map.hasLayer(veniceLayer)) {
+          map.removeLayer(veniceLayer);
+          this.innerHTML = "Show Venice Layer";
+        } else {
+          veniceLayer.addTo(map);
+          this.innerHTML = "Hide Venice Layer";
+        }
+      };
+    </script>
+  </body>
+</html>
